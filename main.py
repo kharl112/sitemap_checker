@@ -36,9 +36,8 @@ if xml_data is not False:
     loc = row.get('loc')
 
     res = get_url_contents(loc)
-    if res is not False:
-      print(loc, ' okay') 
-
+    if res is False:
+      sys.exit(1)
 else:
   sys.exit(1)
 
